@@ -21,7 +21,10 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'primary-color': '#F85559',
+                        'blackish' : '#121212',
+                        'gradient-start': '#121212',
+                        'gradient-end': '#121212',
                     }
                 }
             }
@@ -36,19 +39,117 @@
     </style>
 </head>
 
-<body>
+<body class="font-lato">
     <!-- Header Section -->
-    <header>
+    <header class="md:container md:mx-auto">
         <!-- Nav Section -->
-        <nav>
-            
+        <nav class="bg-primary-color rounded-full flex text-white mt-16 px-6 py-5">
+            <div class="navbar flex justify-center items-center text-center px-auto">
+                <div class="navbar-center hidden flex-1 lg:flex ">
+                    <ul class="text-base flex justify-between gap-4">
+                        <li class="cursor-pointer"><a>Home</a></li>
+                        <li class="cursor-pointer"><a>About Us</a></li>
+                        <li class="cursor-pointer"><a>Shop</a></li>
+                        <li class="cursor-pointer"><a>All Fruits</a></li>
+                    </ul>
+                </div>
+                <div tabindex="0" class="flex gap-4 flex-1">
+                    <div class="w-10 rounded-full">
+                        <img src="/images/logo.png" />
+                    </div>
+                    <h3 class="text-right font-bold text-4xl">Fruit Burst</h3>
+                </div>
+                <div class="flex items-center mr-2 flex-1">
+                    <input type="text" placeholder="Search here"
+                        class="flex-1 input input-bordered w-24 md:w-auto rounded-full text-black border-0 border-primary-color"/>
+                    <svg class="-ml-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3965 17.9996 12.4887 17.9996 10.4995C17.9996 8.51035 17.2094 6.60262 15.8028 5.19605C14.3962 3.78947 12.4885 2.99927 10.4993 2.99927C8.51011 2.99927 6.60238 3.78947 5.19581 5.19605C3.78923 6.60262 2.99902 8.51035 2.99902 10.4995C2.99902 12.4887 3.78923 14.3965 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z"
+                            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>                
+            </div>
         </nav>
-        
-        <!-- Banner Section -->
-        <div class="">
 
+        <!-- Banner Section -->
+        <div class="mt-14">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full bg-gradient-to-r from-black to-white rounded-lg">
+                  <img src="/images/banner1.png" class="w-full" />
+                  <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❮</a> 
+                    <div class="flex flex-col gap-8 text-white text-center justify-center items-center">
+                        <h2 class="text-2xl lg:text-7xl font-extrabold">
+                            Exotic tastes at your 
+                            <br>
+                            doorstep
+                        </h2>
+                        <p>
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary-color border-none text-white hover:text-black w-fit capitalize font-extrabold text-lg">Shop Now</button>
+                    </div>
+                    <a href="#slide2" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❯</a>
+                  </div>
+                  
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full bg-gradient-to-r from-black to-white rounded-lg">
+                  <img src="/images/banner2.png" class="w-full" />
+                  <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❮</a>
+                    <div class="flex flex-col gap-8 text-white text-center justify-center items-center">
+                        <h2 class="text-2xl lg:text-7xl font-extrabold">
+                            Exotic tastes at your 
+                            <br>
+                            doorstep
+                        </h2>
+                        <p>
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary-color border-none text-white hover:text-black w-fit capitalize font-extrabold text-lg">Shop Now</button>
+                    </div>
+                    <a href="#slide3" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full bg-gradient-to-r from-black to-white rounded-lg">
+                  <img src="/images/banner3.png" class="w-full" />
+                  <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❮</a> 
+                    <div class="flex flex-col gap-8 text-white text-center justify-center items-center">
+                        <h2 class="text-2xl lg:text-7xl font-extrabold">
+                            Exotic tastes at your 
+                            <br>
+                            doorstep
+                        </h2>
+                        <p>
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary-color border-none text-white hover:text-black w-fit capitalize font-extrabold text-lg">Shop Now</button>
+                    </div>
+                    <a href="#slide4" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full bg-gradient-to-r from-black to-white rounded-lg">
+                  <img src="/images/banner4.png" class="w-full" />
+                  <div class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❮</a> 
+                    <div class="flex flex-col gap-8 text-white text-center justify-center items-center">
+                        <h2 class="text-2xl lg:text-7xl font-extrabold">
+                            Exotic tastes at your 
+                            <br>
+                            doorstep
+                        </h2>
+                        <p>
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn bg-primary-color border-none text-white hover:text-black w-fit capitalize font-extrabold text-lg">Shop Now</button>
+                    </div>
+                    <a href="#slide1" class="btn btn-circle bg-blackish text-white border-none hover:text-black">❯</a>
+                  </div>
+                </div>
+              </div>
         </div>
-        
+
         <!-- Fruits Section -->
         <div class="">
 
@@ -56,23 +157,23 @@
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main class="md:container md:mx-auto">
         <!-- Deal of the day Section -->
         <section>
 
         </section>
-        
+
         <!-- Meet the team Section -->
         <section>
 
         </section>
-        
+
         <!-- Why Choose Us Section -->
         <section>
 
         </section>
     </main>
-    
+
     <!-- Footer Section -->
     <footer>
 
